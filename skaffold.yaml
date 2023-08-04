@@ -1,0 +1,18 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: consumer
+build:
+  artifacts:
+    - image: sayed/consumer
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - target/classes/META-INF/dekorate/kubernetes.yml
+portForward:
+  - resourceType: deployment
+    resourceName: consumer
+    namespace: default
+    port: 8081
+    localPort: 8081
