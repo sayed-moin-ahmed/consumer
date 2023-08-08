@@ -4,25 +4,25 @@ kind: Deployment
 metadata:
   annotations:
     app.dekorate.io/vcs-url: <<unknown>>
-    app.dekorate.io/commit-id: 4ea273fbaeaa99e5166462d3d11ddbd0547fb3df
+    app.dekorate.io/commit-id: ab16093d81c522a3ba6bdd1745e0d3b7f18c6065
   labels:
-    app.kubernetes.io/version: 0.0.1-SNAPSHOT
     app.kubernetes.io/name: consumer
+    app.kubernetes.io/version: 0.0.1-SNAPSHOT
   name: consumer
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app.kubernetes.io/version: 0.0.1-SNAPSHOT
       app.kubernetes.io/name: consumer
+      app.kubernetes.io/version: 0.0.1-SNAPSHOT
   template:
     metadata:
       annotations:
         app.dekorate.io/vcs-url: <<unknown>>
-        app.dekorate.io/commit-id: 4ea273fbaeaa99e5166462d3d11ddbd0547fb3df
+        app.dekorate.io/commit-id: ab16093d81c522a3ba6bdd1745e0d3b7f18c6065
       labels:
-        app.kubernetes.io/version: 0.0.1-SNAPSHOT
         app.kubernetes.io/name: consumer
+        app.kubernetes.io/version: 0.0.1-SNAPSHOT
     spec:
       containers:
         - env:
