@@ -10,7 +10,7 @@ import java.io.IOException;
 @Slf4j
 public class Consumer {
 
-    @KafkaListener(topics = "users", groupId = "group_id")
+    @KafkaListener(topics = "users", groupId = "group_id", autoStartup = "${listen.auto.start:true}", concurrency = "${listen.concurrency:3}")
     public void consume(String message) throws IOException {
         log.info(String.format("#### -> Consumed message -> %s", message));
     }
